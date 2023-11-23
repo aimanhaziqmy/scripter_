@@ -13,6 +13,7 @@ import { Nav,
 import { FaTimes, FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib'
 import { Button } from '../../globalStyles';
+import logoscripter from "../../images/scripter.png";
 
 
 function Navbar() {
@@ -65,8 +66,7 @@ function Navbar() {
             <Nav>
                 <NavbarContainer>
                     <NavLogo to='/'> 
-                        <NavIcon />
-                            ULTRA
+                        <img src={logoscripter} alt='logo' height='50px' />
                     </NavLogo>
                     <HamburgerIcon onClick={handleClick}>
                         {click ? <FaTimes /> : <FaBars />}
@@ -86,14 +86,14 @@ function Navbar() {
                         </NavItem>
                     
                     
-                        <NavItem onClick={handleProductsClick} productsClick={productsClick}>
+                        {/* <NavItem onClick={handleProductsClick} productsClick={productsClick}>
                             <NavLinks to='/Products' onClick={closeMobileMenu}>
                                 Products
                             </NavLinks>
-                        </NavItem>
+                        </NavItem> */}
 
                         <NavItemBtn >
-                            {button ? (
+                            {/* {button ? (
                                 <NavBtnLink to='/sign-up'>
                                     <Button primary>SIGN UP</Button>
                                 </NavBtnLink>
@@ -101,7 +101,7 @@ function Navbar() {
                                 <NavBtnLink to='/sign-up'>
                                     <Button onClick={closeMobileMenu} fontBig primary>SIGN UP</Button>
                                 </NavBtnLink>
-                            )}
+                            )} */}
                             
                         </NavItemBtn>
                     </NavMenu>
