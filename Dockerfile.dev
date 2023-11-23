@@ -15,6 +15,8 @@ RUN npm install
 # Copying all the files in our project
 COPY . .
 
+EXPOSE 3000
+
 # Set Traefik labels
 LABEL "traefik.enable"="true"
 LABEL "traefik.http.routers.scriptertechnology.rule"="Host(`scriptertechnology.com`)"
@@ -23,4 +25,4 @@ LABEL "traefik.http.routers.scriptertechnology.tls.certresolver"="lets-encrypt"
 LABEL "traefik.http.services.scriptertechnology.loadbalancer.server.port"="1001"
 
 # Starting our application
-CMD ["npm","start"]
+CMD ["npm","run", "start"]
